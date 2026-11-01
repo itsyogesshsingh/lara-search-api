@@ -85,7 +85,6 @@ class SearchController extends Controller
     {
         $total = SearchUsage::count();
         $recent = SearchUsage::with('record:id,content')->latest()->limit(5)->get();
-
         return response()->json(['success' => true, 'total_billable_usages' => $total, 'recent_selections' => $recent], 200);
     }
 }
