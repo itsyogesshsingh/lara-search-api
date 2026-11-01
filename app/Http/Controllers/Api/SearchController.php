@@ -12,9 +12,7 @@ use Illuminate\Support\Facades\Log;
 
 class SearchController extends Controller
 {
-    /**
-     * Search Autocomplete (0 Billable Usage - PRD Section 3)
-     */
+    
     public function search_auto_complete(AutocompleteRequest $request): JsonResponse
     {
         try {
